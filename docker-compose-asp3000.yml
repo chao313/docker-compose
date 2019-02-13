@@ -29,6 +29,12 @@ services:
 
   base_image_by_php_mysql_5_6:
     build:
-      context: ./php
+      context: ./php5_6
       dockerfile: Dockerfile
     image: chao313/base_image_by_php_mysql_5_6:v1.0
+
+  base_image_by_php_mysql_7:
+    build:
+      context: ./php7
+      dockerfile: Dockerfile
+    image: chao313/base_image_by_php_mysql_5_7:v1.0
