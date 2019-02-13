@@ -1,6 +1,6 @@
 ## docker-compose 运行
-## docker-compose -f xxx.yml start
-## docker-compose -f xxx.yml build base_image_by_ubuntu
+## docker-compose -f create_mysql_users.sh.yml start
+## docker-compose -f create_mysql_users.sh.yml build base_image_by_ubuntu
 ## docker-compose -f docker-compose-pro.yml build base_image_by_ubuntu
 
 ##

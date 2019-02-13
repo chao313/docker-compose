@@ -1,6 +1,6 @@
 ## docker-compose 运行
-## docker-compose -f xxx.yml start
-## docker-compose -f xxx.yml build base_image_by_ubuntu
+## docker-compose -f create_mysql_users.sh.yml start
+## docker-compose -f create_mysql_users.sh.yml build base_image_by_ubuntu
 ## docker-compose -f docker-compose-pro.yml build base_image_by_ubuntu
 
 ##
@@ -31,10 +31,17 @@ services:
     build:
       context: ./php5_6
       dockerfile: Dockerfile
-    image: chao313/base_image_by_php_mysql_5_6:v1.0
+    image: chao313/base_image_by_php_mysql_5_6:v1.1
 
   base_image_by_php_mysql_7:
     build:
       context: ./php7
       dockerfile: Dockerfile
     image: chao313/base_image_by_php_mysql_5_7:v1.0
+
+  ## asp3000
+  asp3000_yiyunwei:
+    build:
+      context: ./asp3000/yiyunwei
+      dockerfile: Dockerfile
+    image: chao313/asp3000_yiyunwei:v1.0
