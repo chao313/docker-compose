@@ -1,0 +1,9 @@
+客服:  http://www.xxxx.com/kf.php/
+后台:  http://www.xxxx.com/admin.php/
+前端:  http://www.xxxx.com/admin.php/
+
+数据库 127.0.0.1 root 3306 密码为空
+[docker]
+docker run --rm=true  -p 30082:80 --name tmp2 --privileged=true  chao313/asp3000_yiyunwei:v1.0
+
+ASP3000 网站：http://www.asp300.com/SoftView/11/SoftView_65123.html

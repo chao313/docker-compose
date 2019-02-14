@@ -5,4 +5,6 @@
 
 数据库 127.0.0.1 root 3306 密码为空
 
- docker run --rm=true  -p 30082:80 -p8430:8430 -p 33069:3306 --name tmp2 --privileged=true  chao313/asp3000_welive5:v1.0
+docker run --rm=true  -p 30082:80 -p8430:8430 -p 33069:3306 --name tmp2 --privileged=true  chao313/asp3000_welive5:v1.0
+
+ASP3000 网站：http://www.asp300.com/SoftView/11/SoftView_42162.html
