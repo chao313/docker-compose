@@ -1,0 +1,8 @@
+后台密码：admin admin
+客服电脑端：    http://www.xxxx.com/admin/
+##免费版未开放
+客服移动端： http://www.xxxx.com/welive/app/
+
+数据库 127.0.0.1 root 3306 密码为空
+
+ docker run --rm=true  -p 30082:80 -p8430:8430 -p 33069:3306 --name tmp2 --privileged=true  chao313/asp3000_welive5:v1.0

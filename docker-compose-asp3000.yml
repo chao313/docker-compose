@@ -45,3 +45,10 @@ services:
       context: ./asp3000/yiyunwei
       dockerfile: Dockerfile
     image: chao313/asp3000_yiyunwei:v1.0
+
+    ## asp3000
+  asp3000_welive5:
+    build:
+      context: ./asp3000/welive5
+      dockerfile: Dockerfile
+    image: chao313/asp3000_welive5:v1.0
