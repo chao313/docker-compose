@@ -1,6 +1,6 @@
 客服:  http://www.xxxx.com/kf.php/
 后台:  http://www.xxxx.com/admin.php/
-前端:  http://www.xxxx.com/admin.php/
+前端:  http://www.xxxx.com/
 
 数据库 127.0.0.1 root 3306 密码为空
 [docker]

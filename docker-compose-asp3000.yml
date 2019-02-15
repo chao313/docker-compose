@@ -52,3 +52,10 @@ services:
       context: ./asp3000/welive5
       dockerfile: Dockerfile
     image: chao313/asp3000_welive5:v1.0
+
+  ## asp3000
+  asp3000_biquge:
+    build:
+      context: ./asp3000/biquge
+      dockerfile: Dockerfile
+    image: chao313/asp3000_biquge:v1.0

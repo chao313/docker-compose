@@ -1,0 +1,11 @@
+##前端:
+http://www.xxxx.com
+##后端：
+http://www.xxxx.com/index.php?s=/Admin/Index/index.html
+密码: admin admin
+
+数据库 127.0.0.1 root 3306 密码为空
+
+docker run --rm=true  -p 30082:80 -p 33069:3306 --name tmp2 --privileged=true  chao313/asp3000_biquge:v1.0
+
+ASP3000 网站：http://www.asp300.net/SoftView/27/SoftView_62987.html
