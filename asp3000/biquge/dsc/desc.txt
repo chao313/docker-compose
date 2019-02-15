@@ -1,5 +1,6 @@
 ##前端:
 http://www.xxxx.com
+##注意：移动端的前端必须要配置m开头的域名绑定才行
 ##后端：
 http://www.xxxx.com/index.php?s=/Admin/Index/index.html
 密码: admin admin
