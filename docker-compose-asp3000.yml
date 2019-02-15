@@ -59,3 +59,10 @@ services:
       context: ./asp3000/biquge
       dockerfile: Dockerfile
     image: chao313/asp3000_biquge:v1.0
+
+  ## asp3000
+  asp3000_144g:
+    build:
+      context: ./asp3000/144g
+      dockerfile: Dockerfile
+    image: chao313/asp3000_144g:v1.0
