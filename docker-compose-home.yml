@@ -1,0 +1,65 @@
+version: '3'
+services:
+  ## 网盘
+  ## docker run -d --name aria2-ui -p 80:80 -p 6800:6800 wahyd4/aria2-ui
+  ## 访问地址：http://ip:18005/ http://ip:18005/files
+  ## 登陆密码 admin admin
+  pan:
+    container_name: pan_1
+    image: wahyd4/aria2-ui
+    ports:
+    - 80:80
+    - 6800:6800
+    volumes:
+    - $PWD/compose/pan:/data
+    privileged: true
+
+
+  ## nginx
+  ## docker create --name nginx_1 -p 10022:22 -p 15000:80 --privileged=true -ti nginx
+  nginx:
+    container_name: nginx_1
+    image: docker.io/nginx
+    ports:
+    - 80:80
+    volumes:
+    - $PWD/compose/nginx/www:/www
+    - $PWD/compose/nginx/nginx.conf:/etc/nginx/nginx.conf
+    - $PWD/compose/nginx/logs:/wwwlogs
+    privileged: true
+
+  ## rabbitmq
+  ## docker run -d --name rabbitmq -p 5672:5672 -p 15672:15672 --privileged=true --hostname myRabbit rabbitmq:3.7.8-management
+  rabbitmq_1:
+    image: rabbitmq:3.7.8-management
+    container_name: rabbitmq_1
+    restart: always
+    ports:
+    - 5672:5672
+    - 15672:15672
+    privileged: true
+
+
+  ## gitlab
+  ## sudo docker run --detach --hostname gitlab.example.com -p 1444:443 -p 16000:80 -p 10023:22 --name gitlab --restart always -volume /srv/gitlab/config:/etc/gitlab -volume /srv/gitlab/logs:/var/log/gitlab -volume /srv/gitlab/data:/var/opt/gitlab --privileged=true gitlab/gitlab-ce:latest
+  gitlab_1:
+    image: gitlab/gitlab-ce:latest
+    container_name: gitlab_1
+    restart: always
+    ports:
+    - 16000:80
+    privileged: true
+
+
+  ##docker create --name mysql_1 -p 33061:3306  --privileged=true  -v /home/mysql_1:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456  -ti docker.io/mysql
+  mysql_1:
+    image: docker.io/mysql:5.7
+    container_name: mysql_1
+    restart: always
+    ports:
+    - 3306:3306
+    volumes:
+    - $PWD/compose/mysql:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+    privileged: true

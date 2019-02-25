@@ -9,4 +9,6 @@ http://www.xxxx.com/index.php?s=/Admin/Index/index.html
 
 docker run --rm=true  -p 30082:80 -p 33069:3306 --name tmp2 --privileged=true  chao313/asp3000_biquge:v1.0
 
+docker run  -p 30082:80 --name asp3000_biquge --privileged=true  chao313/asp3000_biquge:v1.0
+
 ASP3000 网站：http://www.asp300.net/SoftView/27/SoftView_62987.html
